@@ -97,6 +97,7 @@ Triggerbot = {
         Value = 0
     }
 },
+
 AntiAim = {
     Enabled = false,
     Type = "Jitter",
@@ -494,10 +495,10 @@ local Notify = NotifyLibrary.Notify
 Module.Functions.Init()
 
 Library.theme.topheight = 50
-Library.theme.accentcolor = Color3.fromRGB(255, 105, 180)
+Library.theme.accentcolor = Color3.fromRGB(132, 0, 0)
 Library.theme.accentcolor2 = Color3.fromRGB(128, 23, 90)
 Library.theme.fontsize = 15
-Library.theme.titlesize = 17
+Library.theme.titlesize = 16
 
 if jakepapaoSettings.Watermark == true then
 
@@ -506,7 +507,7 @@ Library:CreateWatermark("jakepapaoHub | {fps} | {game}")
 end
 
 local Window = Library:CreateWindow(Script.Name, Vector2.new(492, 598), Enum.KeyCode.RightShift)
-local LegitTab = Window:CreateTab("Legit")
+local LegitTab = Window:CreateTab("Legit stuff")
 local AimbotSection = LegitTab:CreateSector("Aimbot", "left")
 
 local AimbotToggle = AimbotSection:AddToggle('Enabled', false, function(State)
@@ -568,9 +569,9 @@ end)
 TValue:AddSlider(1, Settings.Triggerbot.Delay.Value, 60, 1, function(Value)
 Settings.Triggerbot.Delay.Value = Value
 end)
-
 local RageTab = Window:CreateTab("Rage")
 local SilentAimSection = RageTab:CreateSector("Silent Aim", "left")
+
 
 local SilentToggle = SilentAimSection:AddToggle('Silent Aim', false, function(State)
 Settings.SilentAim.Enabled = State
